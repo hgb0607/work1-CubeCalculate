@@ -74,9 +74,9 @@ public class CubeCalculate {
 	 * @param num2 连续正整数中的最大项
 	 * @return 输出立方和
 	 **/
-	private static long sum(int num1,int num2){
+	private static long sum(long num1,long num2){
 		long SumTemp = 0;
-		int k = num2-num1;
+		long k = num2-num1;
 		for (int i = 0; i <= k; i++) {
 			SumTemp = SumTemp+num1*num1*num1;
 			num1++;
