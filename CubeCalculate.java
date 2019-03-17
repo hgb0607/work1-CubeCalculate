@@ -1,4 +1,4 @@
-﻿/*** 这是一个计算判断连续正整数立方和是否是另一个正整数立方的小程序
+/*** 这是一个计算判断连续正整数立方和是否是另一个正整数立方的小程序
 * @author hgb0607
 * @version 1.0
 ***/
@@ -18,12 +18,22 @@ public class CubeCalculate {
 		System.out.println("选择需要运行的模式：\n1.手动输入\n2.自动计算不大于1000内的连续正整数");
 		int mode = in.nextInt();
 		
-		/*模式一：手动输入**/
 		if (mode==1) {
-		System.out.println("输入连续正整数的第一个数字：");		/*获得需要计算的数值**/
-		double a = in.nextDouble();
-		System.out.println("输入连续正整数的最后一个数字：");
-		double b = in.nextDouble();	
+			
+		System.out.println("输入连续正整数的第一个数字：");		/*获得第一项的数值**/
+		int a = in.nextInt();
+		while (a<1) {
+			System.out.println("输入连续正整数的第一个数字(请输入正整数)：");
+			a = in.nextInt();
+		}
+
+		System.out.println("输入连续正整数的最后一个数字：");		/*获得最后一项的数值**/
+		int b = in.nextInt();
+		while (b<=a) {
+			System.out.println("输入连续正整数的最后一个数字(必须大于之前的数值"+a+")：");
+			b = in.nextInt();		
+		}
+
 		double sum = sum(a,b);							/*调用函数计算并判断**/
 		int flag = CubeOrNot(sum);
 		Output(a,b,flag,mode);								/*输出结果**/
