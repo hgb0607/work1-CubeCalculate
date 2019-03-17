@@ -41,7 +41,7 @@ public class CubeCalculate {
 		
 		
 		
-		int sum = sum(a,b);							/*调用函数计算并判断**/
+		long sum = sum(a,b);							/*调用函数计算并判断**/
 		int flag = CubeOrNot(sum);
 		Output(a,b,flag,mode);								/*输出结果**/
 		}
@@ -52,7 +52,7 @@ public class CubeCalculate {
 				
 				for (int y = 1; y <= 1000-x; y++) {		/*连续正整数第一项从1开始穷举**/
 					
-					int sum = sum(y,y+x);				/*调用函数计算并判断**/
+					long sum = sum(y,y+x);				/*调用函数计算并判断**/
 					int flag = CubeOrNot(sum);
 					Output(y,y+x,flag,mode);					/*输出结果**/
 					
@@ -74,8 +74,8 @@ public class CubeCalculate {
 	 * @param num2 连续正整数中的最大项
 	 * @return 输出立方和
 	 **/
-	private static int sum(int num1,int num2){
-		int SumTemp = 0;
+	private static long sum(int num1,int num2){
+		long SumTemp = 0;
 		int k = num2-num1;
 		for (int i = 0; i <= k; i++) {
 			SumTemp = SumTemp+num1*num1*num1;
@@ -88,7 +88,7 @@ public class CubeCalculate {
 	 * @param num 立方和
 	 * @return 输出立方根或非正整数根状态值
 	 **/
-	private static int CubeOrNot(int num) {
+	private static int CubeOrNot(long num) {
 		double cbrt = Math.cbrt(num);
 		if ( cbrt%1 == 0 ) {
 			return (int)cbrt;
