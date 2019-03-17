@@ -102,10 +102,10 @@ public class CubeCalculate {
 	public static void Output(double min,double max ,int cbrt,int mode) {		
 		if (cbrt==0) {
 			if(mode==1)
-			System.out.println("从"+ min + "到" + max + "的连续正整数的立方和不是任何正整数的立方");
+			System.out.println("从"+ (long)min + "到" + (long)max + "的连续正整数的立方和不是任何正整数的立方");
 			else {}
 		} else {
-			System.out.println("从"+ min + "到" + max + "的连续正整数的立方和为" + cbrt + "的立方");
+			System.out.println("从"+ (long)min + "到" + (long)max + "的连续正整数的立方和为" + cbrt + "的立方");
 		}
 	}
 

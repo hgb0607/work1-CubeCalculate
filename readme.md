@@ -5,7 +5,7 @@
 #### 程序代码中使用了中文，如果编译乱码可以使用以下指令进行编译 ####
   
   
-    javac -encoding GBK CubeCalculate.java    
+    javac -encoding utf-8 CubeCalculate.java    
 
   
 #### 编译之后可用以下指令执行 ####
