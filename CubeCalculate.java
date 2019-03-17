@@ -56,7 +56,8 @@ public class CubeCalculate {
 	
 	
 	/**计算连续正整数的三次方和
-	 * @param 输入最小项和最大项
+	 * @param num1 连续正整数中的最小项
+	 * @param num2 连续正整数中的最大项
 	 * @return 输出立方和
 	 **/
 	private static double sum(double num1,double num2){
@@ -70,7 +71,7 @@ public class CubeCalculate {
 	}
 	
 	/**判断结果是否为另外一个数的立方,是则获得立方根
-	 * @param 输入立方和
+	 * @param num 立方和
 	 * @return 输出立方根或非正整数根状态值
 	 **/
 	private static int CubeOrNot(double num) {
@@ -82,7 +83,10 @@ public class CubeCalculate {
 	}
 	
 	/**显示结果
-	 * @param 输入最小值，最大值，立方根状态，选择模式
+	 * @param min 连续正整数中的最小项
+	 * @param max 连续正整数中的最大项
+	 * @param cbrt 立方根状态
+	 * @param mode 选择模式
 	 * @return 输出显示结果到屏幕
 	 **/
 	public static void Output(double min,double max ,int cbrt,int mode) {		
